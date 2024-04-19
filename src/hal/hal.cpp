@@ -181,7 +181,7 @@ void hal_processPendingIRQs() {
 // SPI
 
 static void hal_spi_init () {
-    SPI.begin();
+    SPI.begin(plmic_pins->sck, plmic_pins->miso, plmic_pins->mosi, plmic_pins->nss);
 }
 
 static void hal_spi_trx(u1_t cmd, u1_t* buf, size_t len, bit_t is_read) {

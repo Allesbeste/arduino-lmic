@@ -64,6 +64,9 @@ struct HalPinmap_t {
 
 	// optional pointer to configuration object (bytes 12..15)
 	HalConfiguration_t *pConfig;
+	uint8_t sck;		// byte 16: pin for SPI SCK
+	uint8_t miso;		// byte 17: pin for SPI MISO
+	uint8_t mosi;		// byte 18: pin for SPI MOSI
 	};
 
 class HalConfiguration_t
